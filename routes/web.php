@@ -14,5 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard/index', [
+        'active' => 'dashboard',
+        'title' => 'Dashboard'
+    ]);
+});
+
+Route::get('/category', function () {
+    return view('category/index', [
+        'active' => 'category',
+        'title' => 'Kategori'
+    ]);
+});
+
